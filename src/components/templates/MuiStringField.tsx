@@ -1,5 +1,8 @@
 import { StringSchema, useFieldData, useFieldErrors } from "@m6oss/schema-form";
 import { TextField, Select, MenuItem, Box, Typography } from "@mui/material";
+import { DatePicker, LocalizationProvider } from "@mui/x-date-pickers";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import dayjs from "dayjs";
 
 export const MuiStringField: React.FC<{
   schema: StringSchema;
@@ -190,29 +193,19 @@ const MuiDateField: React.FC<{
   schema: StringSchema;
   path: string[];
 }> = ({ schema, path }) => {
-  const [valueAtPath, setValueAtPath] = useFieldData(path, "");
+  const [valueAtPath, setValueAtPath] = useFieldData(path);
   const errorsAtPath = useFieldErrors(path);
-
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setValueAtPath(event.target.value);
-  };
-
-  const inputType =
-    schema.format === "datetime" ? "datetime-local" : schema.format;
 
   return (
     <Box>
       {schema.title && <Typography variant="h6">{schema.title}</Typography>}
-      <TextField
-        type={inputType}
-        value={valueAtPath}
-        onChange={handleChange}
-        placeholder={schema.title || ""}
-        label={schema.title || ""}
-        variant="outlined"
-        fullWidth
-        margin="normal"
-      />
+      <LocalizationProvider dateAdapter={AdapterDayjs}>
+        <DatePicker
+          value={valueAtPath ? dayjs(valueAtPath) : null}
+          onChange={(value) => setValueAtPath(value?.format("YYYY-MM-DD"))}
+          label={schema.title || ""}
+        />
+      </LocalizationProvider>
       {schema.description && (
         <Typography variant="body2" color="textSecondary">
           {schema.description}
