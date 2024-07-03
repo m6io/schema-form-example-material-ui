@@ -24,7 +24,7 @@ export function Navbar() {
               href="/"
               sx={{ textDecoration: "none", color: "inherit" }}
             >
-              @m6oss/schema-form
+              @react-formgen/json-schema
             </Typography>
             <Box>
               <IconButton color="inherit" onClick={toggleDarkMode}>
@@ -38,7 +38,7 @@ export function Navbar() {
                 <YouTube />
               </IconButton>
               <IconButton
-                href="https://github.com/m6io/schema-form"
+                href="https://github.com/m6io/react-formgen"
                 target="_blank"
                 color="inherit"
               >

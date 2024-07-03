@@ -1,4 +1,4 @@
-import { CustomFields } from "@m6oss/schema-form";
+import { CustomFields } from "@react-formgen/json-schema";
 import { MuiArrayField } from "./MuiArrayField";
 import { MuiBooleanField } from "./MuiBooleanField";
 import { MuiNumberField } from "./MuiNumberField";

@@ -1,4 +1,4 @@
-import { StringSchema, useFieldData, useFieldErrors } from "@m6oss/schema-form";
+import { StringSchema, useFieldData, useFieldErrors } from "@react-formgen/json-schema";
 import { TextField, Select, MenuItem, Box, Typography } from "@mui/material";
 import { DatePicker, LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";

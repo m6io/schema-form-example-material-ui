@@ -20,7 +20,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
         <Container sx={{ py: 10 }}>
           <Box sx={{ mx: "auto", maxWidth: 800 }}>
             <Typography variant="h4" component="h1" gutterBottom>
-              @m6oss/schema-form - Material UI Example
+              @react-formgen/json-schema - Material UI Example
             </Typography>
             {children}
           </Box>

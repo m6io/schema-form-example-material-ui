@@ -1,6 +1,6 @@
-import { SchemaDefinitions, useArrayField } from "@m6oss/schema-form";
-import { JSONSchema7, BaseArraySchema, CustomFields } from "@m6oss/schema-form";
-import { renderField } from "@m6oss/schema-form";
+import { SchemaDefinitions, useArrayField } from "@react-formgen/json-schema";
+import { JSONSchema7, BaseArraySchema, CustomFields } from "@react-formgen/json-schema";
+import { renderField } from "@react-formgen/json-schema";
 import { IconButton, Box, Button, Typography } from "@mui/material";
 import { Close, ArrowDropUp, ArrowDropDown } from "@mui/icons-material";
 

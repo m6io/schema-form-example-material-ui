@@ -1,4 +1,4 @@
-import { NumberSchema, useFieldData, useFieldErrors } from "@m6oss/schema-form";
+import { NumberSchema, useFieldData, useFieldErrors } from "@react-formgen/json-schema";
 import { TextField, Box, Typography } from "@mui/material";
 
 /**
