@@ -17,14 +17,27 @@ export function Navbar() {
     <AppBar position="sticky">
       <Container>
         <Toolbar>
-          <Box display="flex" justifyContent="space-between" width="100%">
+          <Box
+            display="flex"
+            justifyContent="space-between"
+            width="100%"
+            sx={{
+              gap: "1rem",
+            }}
+          >
             <Typography
               variant="h6"
               component="a"
               href="/"
-              sx={{ textDecoration: "none", color: "inherit" }}
+              sx={{
+                textDecoration: "none",
+                color: "inherit",
+                whiteSpace: "nowrap",
+                overflow: "hidden",
+                textOverflow: "ellipsis",
+              }}
             >
-              @react-formgen/json-schema
+              @react-formgen
             </Typography>
             <Box>
               <IconButton color="inherit" onClick={toggleDarkMode}>
